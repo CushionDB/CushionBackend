@@ -10,17 +10,15 @@ services:
       - temp.env
     depends_on:
       - "db"
-    environment:
-      - COUCHDB_USER=${COUCHDB_USER}
-      - COUCHDB_PASSWORD=${COUCHDB_PASSWORD}
+    # environment:
+    #   - COUCHDB_USER=${COUCHDB_USER}
+    #   - COUCHDB_PASSWORD=${COUCHDB_PASSWORD}
   db:
     image: cushion-couch
     volumes:
       - data:/opt/couchdb/data
     ports:
       - "5984:5984"
-    # env_file:
-    #   - couch-variables.env
     environment:
       - COUCHDB_USER=${COUCHDB_USER}
       - COUCHDB_PASSWORD=${COUCHDB_PASSWORD}
