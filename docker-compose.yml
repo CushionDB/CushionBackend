@@ -6,12 +6,19 @@ services:
   app:
     image: cushion-server
     ports:
-    - "3001:3001"
+      - "3001:3001"
     links:
-    - db
+      - db
   db:
     image: cushion-couch
+    volumes:
+      - type: volume
+        source: couchdata
+        target: /opt/couchdb/data
     ports:
-    - "5984:5984"
+      - "5984:5984"
     env_file:
       - couch-variables.env
+
+  volumes:
+    couchdata:
