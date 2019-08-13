@@ -1,27 +1,45 @@
 version: '3'
+
 services:
+
   app:
-    image: cushion-server
+    image: cushion-server:latest
     ports:
       - "3001:3001"
-    links:
-      - db
-    env_file:
-      - temp.env
+    networks:
+      backend:
+        aliases:
+          - backend
+    # links:
+    #   - db
     depends_on:
       - "db"
-    # environment:
-    #   - COUCHDB_USER=${COUCHDB_USER}
-    #   - COUCHDB_PASSWORD=${COUCHDB_PASSWORD}
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=admin
+      - NODE_ENV=prod
+      - PRIVATE_VAPID=d06XlKrpPtkRrYc0EyEXZ2r2k14H1vUkj5GfOoEate0
+      - PUBLIC_VAPID=BCA04yoTGRbqfe__mD3jXmNxYWCKF2jcPY4Kbas7GqV3o7vS43kahAucdIQF_aFix1mCkkGQzRwqob53atFxHJg
+      - APP_EMAIL=test@example.com
+      - COUCH_BASE_URL=http://backend:5984/
+
   db:
-    image: cushion-couch
+    image: couch-cushion:latest
     volumes:
       - data:/opt/couchdb/data
     ports:
       - "5984:5984"
     environment:
-      - COUCHDB_USER=${COUCHDB_USER}
-      - COUCHDB_PASSWORD=${COUCHDB_PASSWORD}
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=admin
+    networks:
+      backend:
+        aliases:
+          - backend
+          - database
+
+networks: 
+  backend:
 
 volumes:
   data:
