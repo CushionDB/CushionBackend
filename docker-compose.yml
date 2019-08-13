@@ -1,0 +1,17 @@
+# This is just an example of some of the compose properties
+# The image names will obviously be differerent
+
+version: '3'
+services:
+  app:
+    image: cushion-server
+    ports:
+    - "3001:3001"
+    links:
+    - db
+  db:
+    image: cushion-couch
+    ports:
+    - "5984:5984"
+    env_file:
+      - couch-variables.env

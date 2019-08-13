@@ -1,0 +1,7 @@
+curl -X PUT http://localhost:5984/_node/_local/_config/admins/admin -d '"admin"'
+curl -X PUT http://admin:admin@127.0.0.1:5984/_users
+curl -X PUT http://admin:admin@127.0.0.1:5984/_replicator
+curl -X PUT http://admin:admin@127.0.0.1:5984/_global_changes
+curl -X PUT http://admin:admin@localhost:5984/_node/_local/_config/couch_peruser/enable -d '"true"'
+curl -X PUT http://admin:admin@localhost:5984/_node/_local/_config/couch_peruser/database_prefix -d '"cushion_"'
+curl -X PUT http://admin:admin@localhost:5984/_node/_local/_config/couch_peruser/delete_dbs -d '"true"'
