@@ -4,7 +4,7 @@ COUCH_CREDENTIALS=./.env/.couch_credentials.env
 VAPID_KEYS=./.env/.vapid_keys.env
 APP_ENV=./.env/.app_env.env
 
-printf "Welcome to CushionDB!\nPlease enter the following information. \nLeave blank to use default values\n"
+printf "Welcome to CushionDB!\nPlease enter the following information. \n(Leave blank to use default values)\n"
 
 read -r -p 'New CouchDB admin name [admin]: ' couch_admin
 couch_admin=${couch_admin:-admin}
