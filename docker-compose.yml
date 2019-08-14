@@ -10,28 +10,24 @@ services:
       backend:
         aliases:
           - backend
-    # links:
-    #   - db
     depends_on:
       - "db"
+    env_file:
+      - .env/.app_env.env
+      - .env/.vapid_keys.env
+      - .env/.couch_credentials.env
     environment:
-      - COUCHDB_USER=admin
-      - COUCHDB_PASSWORD=admin
-      - NODE_ENV=prod
-      - PRIVATE_VAPID=d06XlKrpPtkRrYc0EyEXZ2r2k14H1vUkj5GfOoEate0
-      - PUBLIC_VAPID=BCA04yoTGRbqfe__mD3jXmNxYWCKF2jcPY4Kbas7GqV3o7vS43kahAucdIQF_aFix1mCkkGQzRwqob53atFxHJg
-      - APP_EMAIL=test@example.com
+      - NODE_ENV=production
       - COUCH_BASE_URL=http://backend:5984/
 
   db:
-    image: couch-cushion:latest
+    image: cushion-couch:latest
     volumes:
       - data:/opt/couchdb/data
     ports:
       - "5984:5984"
-    environment:
-      - COUCHDB_USER=admin
-      - COUCHDB_PASSWORD=admin
+    env_file:
+      - .env/.couch_credentials.env
     networks:
       backend:
         aliases:

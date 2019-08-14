@@ -1,0 +1,7 @@
+ENV_FILE=./.env/.app_env.env
+
+if ! test -f $ENV_FILE; then
+  ./bin/cushion-server-init
+fi
+
+docker-compose up
