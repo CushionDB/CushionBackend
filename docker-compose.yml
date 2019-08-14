@@ -33,6 +33,8 @@ services:
         aliases:
           - backend
           - database
+    logging:
+      driver: none
 
 networks: 
   backend:
