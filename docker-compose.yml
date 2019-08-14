@@ -16,9 +16,7 @@ services:
       - .env/.app_env.env
       - .env/.vapid_keys.env
       - .env/.couch_credentials.env
-    environment:
-      - NODE_ENV=production
-      - COUCH_BASE_URL=http://backend:5984/
+      - .env/.prod.env
 
   db:
     image: cushion-couch:latest
