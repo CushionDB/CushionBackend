@@ -3,6 +3,7 @@ version: '3'
 services:
 
   app:
+    container_name: Cushion-Server
     image: cushion-server:latest
     ports:
       - "3001:3001"
@@ -19,6 +20,7 @@ services:
       - .env/.prod.env
 
   db:
+    container_name: CouchDB
     image: cushion-couch:latest
     volumes:
       - data:/opt/couchdb/data
@@ -31,8 +33,6 @@ services:
         aliases:
           - backend
           - database
-    logging:
-      driver: none
 
 networks: 
   backend:
