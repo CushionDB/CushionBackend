@@ -4,11 +4,13 @@ CushionDocker includes the `docker-compose.yml` file that is used to build and r
 
 ## Usage
 
-Rather than explicitely running the `docker-compose up` command, you should start by running the `cushion-backend-init` script. This will prompt you for information that will be used for various configurations for the containers.
+In the Repo run `./bin/cushion-beckend-start`. The first time this command it run it will prompt you for some information. Make sure that if you update any configuration you will need to update the cushionClient configuration as well.
+
+If you need to change any configurations later run the `cushion-backend-init` script.
 
 <p align="center"><img src="https://cushiondb.github.io/img/cushion-backend-init.gif"></p>
 
-Next, you can run the `cushion-backend-start` script which will make sure proper configurations have been setup, then will run `docker-compose up` for you.
+Feel free to add `./bin/cushion-backend-start` to your PATH so you don't have to retype it every time.
 
 <p align="center"><img src="https://cushiondb.github.io/img/cushion-backend-start.gif"></p>
 
