@@ -3,6 +3,7 @@
 ENV_FILE=./.env/.app_env.env
 
 if ! test -f $ENV_FILE; then
+	printf "Welcome to CushionDB!\n"
   ./bin/cushion-backend-init
 fi
 
