@@ -11,3 +11,11 @@ Rather than explicitely running the `docker-compose up` command, you should star
 Next, you can run the `cushion-backend-start` script which will make sure proper configurations have been setup, then will run `docker-compose up` for you.
 
 <p align="center"><img src="https://cushiondb.github.io/img/cushion-backend-start.gif"></p>
+
+# The Team
+
+[Avshar Kirksall]() *Software Engineer* Brooklyn, NY
+
+[Jaron Truman]() *Software Engineer* Las Vegas, NV
+
+[Daniel Rote]() *Software Engineer* Seattle, WA
