@@ -1,0 +1,22 @@
+{
+  "name": "cushionbackend",
+  "version": "1.0.0",
+  "description": "CushionDB's server side component docker-composed.",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cushion-init": "./.bin/cushion-backend-init",
+    "cushion-start": "./.bin/cushion-backend-start",
+    "cushion-stop": "./.bin/cushion-backend-teardown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CushionDB/CushionDocker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CushionDB/CushionDocker/issues"
+  },
+  "homepage": "https://github.com/CushionDB/CushionDocker#readme"
+}
