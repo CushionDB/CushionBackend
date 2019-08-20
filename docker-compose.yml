@@ -4,7 +4,7 @@ services:
 
   app:
     container_name: Cushion-Server
-    image: cushion-server:latest
+    image: cushiondb/cushiondb-server:latest
     ports:
       - "3001:3001"
     networks:
@@ -21,7 +21,7 @@ services:
 
   db:
     container_name: CouchDB
-    image: cushion-couch:latest
+    image: cushiondb/cushiondb-couch:latest
     volumes:
       - data:/opt/couchdb/data
     ports:

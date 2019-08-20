@@ -1,0 +1,3 @@
+.env/.app_env.env
+.env/.vapid_keys.env
+.env/.couch_credentials.env
