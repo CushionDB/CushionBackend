@@ -16,7 +16,8 @@ run `./.bin/cushion-backend-teardown` to tear down the docker images.
 
 # The Team
 
-[Avshar Kirksall]() *Software Engineer* Brooklyn, NY
+[Avshar Kirksall](https://avshrk.github.io/
+) *Software Engineer* Brooklyn, NY
 
 [Jaron Truman]() *Software Engineer* Las Vegas, NV
 
