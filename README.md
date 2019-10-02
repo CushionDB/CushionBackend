@@ -4,7 +4,7 @@ CushionBackend is the easiest way to start up CushionDB's backend and database. 
 
 ## Usage
 
-Clone this repo, and in the repo's root folder run `./.bin/cushion-beckend-start`. The first time this command it run it will prompt you for some information. Make sure that if you update any configuration you will need to update the cushionClient configuration as well.
+Clone this repo, and in the repo's root folder run `./.bin/cushion-backend-start`. The first time this command it run it will prompt you for some information. Make sure that if you update any configuration you will need to update the cushionClient configuration as well.
 
 If you need to change any configurations later run the `./.bin/cushion-backend-init` script.
 
