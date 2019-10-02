@@ -19,6 +19,7 @@ run `./.bin/cushion-backend-teardown` to tear down the docker images.
 [Avshar Kirksall](https://avshrk.github.io/
 ) *Software Engineer* Brooklyn, NY
 
-[Jaron Truman]() *Software Engineer* Las Vegas, NV
+[Jaron Truman](https://jtruman88.github.io/
+) *Software Engineer* Las Vegas, NV
 
 [Daniel Rote](https://drote.github.io) *Software Engineer* Seattle, WA
